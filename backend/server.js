@@ -2,9 +2,9 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import { v2 as cloudinary } from "cloudinary";
-import authRoutes from "./routes/auth.routes.js"; // authRoutes is essentially the router object that was exported from auth.routes.js, just Direct default import with a custom name:
-import userRoutes from "./routes/user.routes.js";
-import postRoutes from "./routes/post.routes.js";
+import authRoutes from "./routes/auth.route.js"; // authRoutes is essentially the router object that was exported from auth.routes.js, just Direct default import with a custom name:
+import userRoutes from "./routes/user.route.js";
+import postRoutes from "./routes/post.route.js";
 
 import connectMongoDB from "./db/connectMongoDB.js";
 
