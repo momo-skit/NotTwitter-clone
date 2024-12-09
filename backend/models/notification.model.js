@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 
+
+// ok quick note here: from, to, types, read are custome field
 const notificationSchema = new mongoose.Schema(
   {
     // send from one user
