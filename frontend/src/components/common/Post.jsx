@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Post = ({ post }) => {
+  // take post prop from parent Posts.jsx
   const [comment, setComment] = useState("");
   const postOwner = post.user;
   const isLiked = false;
