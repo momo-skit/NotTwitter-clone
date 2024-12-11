@@ -20,7 +20,7 @@ cloudinary.config({
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(express.json()); // to parse req.body
+app.use(express.json({ limit: "5mb" })); // to parse req.body.. dont add to muc hlimit cuz DOS attacj-- theyu can bomb u with heavy requesr
 app.use(express.urlencoded({ extended: true })); // parse form data (urlencoded)
 
 app.use(cookieParser());
