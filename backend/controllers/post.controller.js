@@ -85,7 +85,9 @@ export const commentOnPost = async (req, res) => {
     post.comments.push(comment);
     await post.save();
 
-    res.status(200).json(post); // 200 becasue wie upadte a field on the existing collection not create nthinhg new like create 201
+    const updatedComments = post.comments; // my try
+
+    res.status(200).json(updatedComments); // 200 becasue wie upadte a field on the existing collection not create nthinhg new like create 201
   } catch (error) {
     console.log("Error in commentOnPost controller: ", error);
     res.status(500).json({ error: "Internal server error" });
